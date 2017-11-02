@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "botkit": "^0.6.5",
-    "config": "^1.27.0"
+    "config": "^1.27.0",
+    "object-dig": "^0.1.1"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "name": "botlint",
+  "version": "0.1.0",
+  "description": "Everyone makes it easy to proofread natural languages by any platform BOT",
+  "main": "src/index.js",
+  "repository": "git@github.com:bino98/botlint.git",
+  "author": "Takafumi Yamamoto <bino98@gmail.com>",
+  "license": "MIT"
+}

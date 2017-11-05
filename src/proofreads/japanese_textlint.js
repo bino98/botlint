@@ -16,13 +16,10 @@ export default class JapaneaseTextlint extends Proofread {
     return new Promise((resolve) => {
       this.textlintEngile.executeOnText(text).then(lintResults => {
         if (!this.textlintEngile.isErrorResults(lintResults)) {
-          resolve({ error: false, message: '' })
+          resolve({ error: false, results: [] })
           return
         }
-        const message = lintResults[0].messages.map(message => (
-          `${message.line}: ${message.message}`
-        )).join('\n')
-        resolve({ error: true, message })
+        resolve({ error: true, results: lintResults[0].messages })
       })
     })
   }

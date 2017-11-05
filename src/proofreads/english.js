@@ -3,7 +3,7 @@ import request from 'request'
 
 const URL_ENDPOINT = 'https://api.textgears.com/check.php'
 
-export default class TextGear extends Proofread {
+export default class English extends Proofread {
   check(text) {
     var options = {
       url: this.url(text),

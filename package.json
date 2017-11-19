@@ -19,9 +19,11 @@
   },
   "dependencies": {
     "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
     "botkit": "^0.6.5",
+    "flow-bin": "^0.59.0",
     "google-cloud": "^0.57.0",
     "request": "^2.83.0",
     "textlint": "^9.0.1",

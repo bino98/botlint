@@ -1,5 +1,6 @@
 import Proofread, { initialResolve } from './base'
 import { TextLintEngine } from 'textlint'
+import type { Message } from './base'
 import path from 'path'
 
 const TEXTLINT_FILE_NAME = '.japanease_textlintrc'
@@ -19,7 +20,13 @@ export default class Japanease extends Proofread {
           resolve(initialResolve)
           return
         }
-        resolve({ ...initialResolve, error: true, messages: lintResults[0].messages })
+        const messages = lintResults[0].messages.map((message): Message => (
+          {
+            detail: message.message,
+            line: message.line,
+          }
+        ))
+        resolve({ ...initialResolve, error: true, messages })
       })
     })
   }

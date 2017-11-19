@@ -1,22 +1,25 @@
-import Proofread, { initialResolve } from './base'
+// @flow
+
+import { initialResolve } from './base'
 import { TextLintEngine } from 'textlint'
 import type { Message } from './base'
 import path from 'path'
 
 const TEXTLINT_FILE_NAME = '.japanease_textlintrc'
 
-export default class Japanease extends Proofread {
+export default class Japanease {
+  lintEngine: Object;
+
   constructor() {
-    super()
-    this.textlintEngile = new TextLintEngine({
+    this.lintEngine = new TextLintEngine({
       configFile: path.join(__dirname, `../../config/textlint/${TEXTLINT_FILE_NAME}`),
     })
   }
 
-  check(text) {
+  check(text: string) {
     return new Promise((resolve) => {
-      this.textlintEngile.executeOnText(text).then(lintResults => {
-        if (!this.textlintEngile.isErrorResults(lintResults)) {
+      this.lintEngine.executeOnText(text).then((lintResults: Array<any>) => {
+        if (!this.lintEngine.isErrorResults(lintResults)) {
           resolve(initialResolve)
           return
         }

@@ -1,12 +1,12 @@
 // @flow
 
-import Proofread, { initialResolve } from './base'
+import { initialResolve } from './base'
 import request from 'request'
 import type { Message } from './base'
 
 const URL_ENDPOINT = 'https://api.textgears.com/check.php'
 
-export default class English extends Proofread {
+export default class English {
   check(text: string) {
     var options = {
       url: this.url(text),

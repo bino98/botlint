@@ -1,5 +1,10 @@
+// @flow
+
 export default class Skill {
-  constructor(bot, proofreads) {
+  bot: Object;
+  proofreads: Array<Object>;
+
+  constructor(bot: Object, proofreads: Array<Object>) {
     this.bot = bot
     this.proofreads = proofreads
   }

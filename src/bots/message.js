@@ -1,7 +1,7 @@
 // @flow
 import type { Message } from '../proofreads/base'
 
-export const initialMessage: Message = {
+const initialMessage: Message = {
   title: undefined,
   detail: undefined,
   line: undefined,

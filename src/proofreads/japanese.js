@@ -7,7 +7,7 @@ import path from 'path'
 
 const TEXTLINT_FILE_NAME = '.japanease_textlintrc'
 
-export default class Japanease {
+export default class Japanese {
   lintEngine: Object;
 
   constructor() {
@@ -27,6 +27,7 @@ export default class Japanease {
           {
             detail: message.message,
             line: message.line,
+            footer: 'by Textlint - Japanese'
           }
         ))
         resolve({ ...initialResolve, error: true, messages })

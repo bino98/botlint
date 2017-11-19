@@ -20,6 +20,7 @@ export default class English {
             detail: `${error.bad} => ${error.better.join(', ')}`,
             length: error.length,
             offset: error.offset,
+            footer: 'by TextGear'
           }
         })
         resolve({ ...initialResolve, error: true, messages })

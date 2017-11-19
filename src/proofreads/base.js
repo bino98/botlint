@@ -10,6 +10,7 @@ export type Message = {
   line?: number,
   offset?: number,
   length?: number,
+  footer: string,
 }
 
-export const initialResolve: Result = { error: false, messages: [] }
+export const initialResolve: Result = { error: false, messages: [], footer: 'by Botlint' }

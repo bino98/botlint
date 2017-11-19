@@ -1,5 +1,10 @@
+export const initialMessage = {
+  text: undefined,
+  line: undefined,
+}
+
 export default class Message {
-  static text(text) {
-    return text
+  static message(message = initialMessage) {
+    return message.text
   }
 }

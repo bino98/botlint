@@ -1,10 +1,10 @@
 export default class Skill {
-  constructor(bot, proofread) {
+  constructor(bot, proofreads) {
     this.bot = bot
-    this.proofread = proofread
+    this.proofreads = proofreads
   }
 
-  set() {
+  apply() {
     return
   }
 }

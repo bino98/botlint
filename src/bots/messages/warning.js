@@ -1,23 +1,10 @@
-import Message from './base'
+import Message, { initialMessage } from './base'
 
 export default class Warning extends Message {
-  static text(message, line) {
-    return {
-      "attachments": [
-          {
-              "fields": [
-                {
-                  title: 'Detail',
-                  value: message,
-                },
-                {
-                  title: 'Line',
-                  value: line,
-                },
-              ],
-              "color": "#F35A00"
-          }
-      ]
-  }
+  static message(message = initialMessage) {
+    let attachment = { fields: [] }
+    if (message.message) { attachment.fields.push({ title: 'Detail', value: message.message }) }
+    if (message.line) { attachment.fields.push({ title: 'Line', value: message.line }) }
+    return { "attachments": [ { ...attachment, "color": "#F35A00" }]}
   }
 }

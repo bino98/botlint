@@ -1,10 +1,10 @@
-import Proofread from './base'
+import Proofread, { initialResolve } from './base'
 import { TextLintEngine } from 'textlint'
 import path from 'path'
 
 const TEXTLINT_FILE_NAME = '.japanease_textlintrc'
 
-export default class JapaneaseTextlint extends Proofread {
+export default class Japanease extends Proofread {
   constructor() {
     super()
     this.textlintEngile = new TextLintEngine({
@@ -16,10 +16,10 @@ export default class JapaneaseTextlint extends Proofread {
     return new Promise((resolve) => {
       this.textlintEngile.executeOnText(text).then(lintResults => {
         if (!this.textlintEngile.isErrorResults(lintResults)) {
-          resolve({ error: false, results: [] })
+          resolve(initialResolve)
           return
         }
-        resolve({ error: true, results: lintResults[0].messages })
+        resolve({ ...initialResolve, error: true, messages: lintResults[0].messages })
       })
     })
   }

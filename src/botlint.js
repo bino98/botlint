@@ -13,7 +13,7 @@ class Botlint {
 
   constructor() {
     this.bot = new SlackBot()
-    this.applyChecker()
+    // this.applyChecker()
     this.applyTranslate()
   }
 

@@ -6,7 +6,7 @@ import type { Message } from './base'
 
 const URL_ENDPOINT = 'https://api.textgears.com/check.php'
 
-export default class English {
+export default class TextGear {
   check(text: string) {
     var options = {
       url: this.url(text),

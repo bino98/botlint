@@ -7,7 +7,7 @@ import path from 'path'
 
 const TEXTLINT_FILE_NAME = '.japanease_textlintrc'
 
-export default class Japanese {
+export default class JapaneseLint {
   lintEngine: Object;
 
   constructor() {

@@ -1,5 +1,7 @@
 { 
   "rules" : { 
     "preset-jtf-style": true,
+    "preset-japanese": true,
+    
   }
 }

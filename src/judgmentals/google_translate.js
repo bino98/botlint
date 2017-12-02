@@ -30,7 +30,7 @@ export default class GoogleTranslate {
           if (response.status !== 200 || results.length === 0) { return resolve(initialResolve) }
           const messages: Array<Message> = results.map((result): Message => {
             return {
-              title: `${SOURCE} => ${TARGET}`,
+              title: `${SOURCE} was detected. translate to ${TARGET}`,
               detail: result,
               footer: 'by Google Cloud Translate'
             }

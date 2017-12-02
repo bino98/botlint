@@ -28,6 +28,7 @@
     "google-cloud": "^0.57.0",
     "object-dig": "^0.1.1",
     "textlint": "^9.0.1",
+    "textlint-rule-preset-japanese": "^2.0.0",
     "textlint-rule-preset-jtf-style": "^2.3.0",
     "xml2json": "^0.11.0"
   }

@@ -2,11 +2,11 @@
 
 export default class Skill {
   bot: Object;
-  proofreads: Array<Object>;
+  judgementals: Array<Object>;
 
-  constructor(bot: Object, proofreads: Array<Object>) {
+  constructor(bot: Object, judgementals: Array<Object>) {
     this.bot = bot
-    this.proofreads = proofreads
+    this.judgementals = judgementals
   }
 
   apply() {

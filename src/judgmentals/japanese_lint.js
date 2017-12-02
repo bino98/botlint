@@ -5,14 +5,14 @@ import { TextLintEngine } from 'textlint'
 import type { Message } from './base'
 import path from 'path'
 
-const TEXTLINT_FILE_NAME = '.japanease_textlintrc'
+const CONFIG_FILE_PATH = '../../config/japanese_lint.json'
 
 export default class JapaneseLint {
   lintEngine: Object;
 
   constructor() {
     this.lintEngine = new TextLintEngine({
-      configFile: path.join(__dirname, `../../config/textlint/${TEXTLINT_FILE_NAME}`),
+      configFile: path.join(__dirname, CONFIG_FILE_PATH),
     })
   }
 

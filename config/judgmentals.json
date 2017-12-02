@@ -1,0 +1,8 @@
+{
+  "enables": [
+    "GoogleTranslate",
+    "JapaneseLint",
+    "TextGear",
+    "YahooProofread"
+  ]
+}
